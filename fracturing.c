@@ -3,7 +3,8 @@
 #define PI 3.14159
 
 
-
+// Making this took a while. From the pdf it was made clear that there was way to make a function that simplifies the user input part of the assignment
+// I knew that I had to use void and make a variable that can then be inserted into future functions.
 void askForUserInput(double *x_1, double *y_1, double *x_2, double *y_2) {
     
     printf("Enter x_1: ");
@@ -44,30 +45,26 @@ double calculate_Perimeter(){
      printf("Point #2 entered: x_2 = %.1f; y_2 = %.1f\n", x_2, y_2);
      printf("The perimeter of the city encompassed by your request is %.2f\n", perimeter);
 
-     return 4.0;
+     return 2.0;
 
 }
 
+// Area of a circle is = π * r^2
+// Thats all good in theory but now that means I have to find the radius. Which is just diamter/2 but this has to be included in my function
+// 
+double calculate_Area(){
+    double x_1, y_1, x_2, y_2;
 
-//double calculate_Area(){
-    //double x_1, y_1, x_2, y_2;
-     //printf("Enter x_1:");
-     //scanf("%lf", &x_1);
-     //printf("Enter y_1:");
-     //scanf("%lf", &y_1);
-     //printf("Enter x_2:");
-     //scanf("%lf", &x_2);
-     //printf("Enter y_2:");
-    // scanf("%lf", &y_2);
+     askForUserInput(&x_1, &y_1, &x_2, &y_2);
+     
+     double area = PI * pow((sqrt(pow(x_2 - x_1, 2) + pow(y_2 - y_1, 2)))/2, 2)
 
-     //double area = 
-
-
+}
 
 int main (int argc, char **argv){
     calculate_Distance();
     calculate_Perimeter();
-    //calculate_Area();
+    calculate_Area();
     //calculate_Width();
     //calculate_Height();
 

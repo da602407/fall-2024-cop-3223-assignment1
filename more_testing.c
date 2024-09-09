@@ -26,7 +26,22 @@ double calculate_Distance() {
     return distance;
 }
 
+double calculate_Perimeter(){
+    double x_1, y_1, x_2, y_2;
+     
+     askForUserInput(&x_1, &y_1, &x_2, &y_2);
+
+     double perimeter = PI * sqrt(pow(x_2 - x_1, 2) + pow(y_2 - y_1, 2));
+     printf("Point #1 entered: x_1 = %.1f; y_1 = %.1f\n", x_1, y_1);
+     printf("Point #2 entered: x_2 = %.1f; y_2 = %.1f\n", x_2, y_2);
+     printf("The perimeter of the city encompassed by your request is %.2f\n", perimeter);
+
+     return 4.0;
+
+}
+
 int main(int argc, char **argv) {
-    calculate_Distance();  // Call calculate_Distance here
+    calculate_Distance();  
+    calculate_Perimeter();
     return 0;
 }

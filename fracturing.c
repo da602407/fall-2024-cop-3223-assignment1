@@ -2,19 +2,28 @@
 #include <math.h>
 #define PI 3.14159
 
+
+
+void askForUserInput(double *x_1, double *y_1, double *x_2, double *y_2) {
+    
+    printf("Enter x_1: ");
+    scanf("%lf", x_1);  
+    printf("Enter y_1: ");
+    scanf("%lf", y_1);
+    printf("Enter x_2: ");
+    scanf("%lf", x_2);
+    printf("Enter y_2: ");
+    scanf("%lf", y_2);
+}
+
+
+
 // Need to write a function that uses user input to generate 2 points and from there find the distance between the two points.
 // To find the distance between two points we use the distance formula = √(x_2-x_1)^2 + (y_2-y_1)^2
 double calculate_Distance(){
     double x_1, y_1, x_2, y_2;
     
-     printf("Enter x_1:");
-     scanf("%lf", &x_1);
-     printf("Enter y_1:");
-     scanf("%lf", &y_1);
-     printf("Enter x_2:");
-     scanf("%lf", &x_2);
-     printf("Enter y_2:");
-     scanf("%lf", &y_2);
+     askForUserInput(&x_1, &y_1, &x_2, &y_2);
 
     double distance = sqrt(pow(x_2 - x_1, 2) + pow(y_2 - y_1, 2));
     printf("Point #1 entered: x_1 = %.1f; y_1 = %.1f\n", x_1, y_1);
@@ -27,14 +36,8 @@ double calculate_Distance(){
 // We have the diamter already from calcualting the distance so all that is left to do is multiply it by π
 double calculate_Perimeter(){
     double x_1, y_1, x_2, y_2;
-     printf("Enter x_1:");
-     scanf("%lf", &x_1);
-     printf("Enter y_1:");
-     scanf("%lf", &y_1);
-     printf("Enter x_2:");
-     scanf("%lf", &x_2);
-     printf("Enter y_2:");
-     scanf("%lf", &y_2);
+     
+     askForUserInput(&x_1, &y_1, &x_2, &y_2);
 
      double perimeter = PI * sqrt(pow(x_2 - x_1, 2) + pow(y_2 - y_1, 2));
      printf("Point #1 entered: x_1 = %.1f; y_1 = %.1f\n", x_1, y_1);

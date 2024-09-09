@@ -15,6 +15,7 @@ void askForUserInput(double *x_1, double *y_1, double *x_2, double *y_2) {
     scanf("%lf", x_2);
     printf("Enter y_2: ");
     scanf("%lf", y_2);
+
 }
 
 
@@ -30,6 +31,7 @@ double calculate_Distance(){
     printf("Point #1 entered: x_1 = %.1f; y_1 = %.1f\n", x_1, y_1);
     printf("Point #2 entered: x_2 = %.1f; y_2 = %.1f\n", x_2, y_2);
     printf("The distance between the two points is %.2f\n", distance); 
+
 }
 
 // Perimeter of a circle is the same thing as the circumference of a circle
@@ -99,8 +101,6 @@ double calculate_Height(){
 
      return 5.0;
 
-
-
 }
 
 int main (int argc, char **argv){
@@ -110,6 +110,6 @@ int main (int argc, char **argv){
     calculate_Width();
     calculate_Height();
 
-
     return 0;
+    
 }

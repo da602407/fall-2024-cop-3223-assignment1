@@ -10,7 +10,7 @@ double calculate_Distance();
 //double calculate_Height();
 
 
-int main (int argc, char **argv){
+int main (){
     calculate_Distance();
     //calculate_Perimeter();
     //calculate_Area();
